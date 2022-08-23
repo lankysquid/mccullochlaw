@@ -5,6 +5,8 @@ import com.mccullochlaw.components.appnav.AppNav;
 import com.mccullochlaw.components.appnav.AppNavItem;
 import com.mccullochlaw.views.about.AboutView;
 import com.mccullochlaw.views.home.HomeView;
+import com.mccullochlaw.views.nerve_injury.LingualNerveView;
+import com.mccullochlaw.views.nerve_injury.NerveView;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
@@ -60,7 +62,9 @@ public class MainLayout extends AppLayout {
 
         nav.addItem(new AppNavItem("Home", HomeView.class, "la la-th-list"));
         nav.addItem(new AppNavItem("About", AboutView.class, "la la-globe"));
-
+        AppNavItem nerveInjury = new AppNavItem("Nerve Injury", NerveView.class, "la la-globe");
+        nerveInjury.addItem(new AppNavItem("Lingual Nerve", LingualNerveView.class, "la la-globe"));
+        nav.addItem(nerveInjury);
         return nav;
     }
 
