@@ -1,1 +1,1 @@
-web: mvn clean package - Production
+web: mvn clean package -Production
